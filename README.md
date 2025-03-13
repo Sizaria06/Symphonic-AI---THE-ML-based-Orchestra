@@ -1,6 +1,6 @@
 Symphonic AI
 
-Symphonic AI allows you to conduct a virtual orchestra using only your web browser and webcam. It uses [PoseNet] to detect body movements and [Tone.js] for real-time orchestral sound playback. Move your hands to control the tempo and play an interactive symphony!
+Symphonic AI is a virtual orchestra using only your web browser and webcam. It uses [PoseNet] to detect body movements and [Tone.js] for real-time orchestral sound playback. Move your hands to control the tempo and play an interactive symphony!
 
 🚀 Features
 
