@@ -1,27 +1,42 @@
-# Symphonic-AI
-Symphonic AI allows you to conduct a virtual orchestra using only your web browser &amp; webcam.
+Symphonic AI
 
-It uses [Posenet] to detect your body pose, and from that how fast you are moving your hands. Using this data and the [Tone.js] web audio library, it plays real samples of orchestral instruments playing individual notes at the speed of your conducting, which play live from a score you that can edit.
+Symphonic AI allows you to conduct a virtual orchestra using only your web browser and webcam. It uses [PoseNet] to detect body movements and [Tone.js] for real-time orchestral sound playback. Move your hands to control the tempo and play an interactive symphony!
 
-## Quick Start
+🚀 Features
 
-```sh
+🎼 Conduct an orchestra with hand movements
+
+📷 Uses PoseNet for real-time body pose detection
+
+🎵 Plays orchestral instrument samples dynamically
+
+🎹 Customizable score editing
+
+⚡ Built with Vanilla JS, TFJS, PIXI.js, and Tone.js
+
+🛠 Quick Start
+
 yarn  # Install dependencies
-```
-```sh
-yarn start  # Start a local dev server
-```
-```sh
-yarn build  # Build static site into the /dist folder
-```
+yarn start  # Start a local development server
+yarn build  # Build the static site into the /dist folder
 
-## Code Structure
+📁 Code Structure
 
-Symphonic AI is built in vanilla JS without a framework. Each JS file in the `/scripts` folder contains a class module, with each class controlling one portion of the app (also there are some helper files with useful functions). It's designed so that modules can be used or deleted according to how you want to remix the app.
+Symphonic AI is built with vanilla JavaScript, without a framework. The main logic is divided into modular classes in the /scripts folder:
 
-- `main.js` controls the primary app state & functions, including loading the app and instantiating the other classes
-- `renderer.js` handles all the UI/DOM updating
-- `orchestra.js` controls the graphic of the orchestra, made with PIXI.js
-- `pose-controller.js` uses TFJS to get the pose state from the webcam with Posenet
-- `posenet-renderer.js` renders the pose skeleton in the interface
+`` – Controls the primary app state and initializes modules.
+
+`` – Manages UI and DOM updates.
+
+`` – Renders the orchestra visualization using PIXI.js.
+
+`` – Uses TensorFlow.js (TFJS) and PoseNet for body tracking.
+
+`` – Displays the detected pose skeleton in the interface.
+
+`` – Handles MIDI playback and orchestral sample loading with Tone.js.
+
+
+
+
 - `audio-player.js` handles the MIDI playback & loading of samples using Tone.js
