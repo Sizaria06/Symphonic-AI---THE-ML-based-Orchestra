@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Standard meta tags -->
+  <title>Symphonic-AI</title>
+
+   <!-- Favicons, fonts, stylesheets & scripts  -->
+  <link rel="icon" type="image/png" href="/favicon-32x32.1e0171f0.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon-16x16.700a4c8e.png" sizes="16x16">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400" rel="stylesheet">
+  <link rel="stylesheet" href="/main.48b3db1d.css">
+  <script src="/main.d8ebb8d6.js" defer=""></script>
+<script src="/main.48b3db1d.js"></script></head>
+
+<!-- Hey nice, there's a bit of room down here for the body -->
+<body>
+  <div class="page-error">
+    <div class="error-container">
+      <img src="/error.da47f81f.svg" alt="A broken treble clef sign">
+      <h2 class="error-title">We're in treble.</h2>
+      <p class="error-text">Something went wrong and I don't know what it is. Maybe you could just... sing along?</p>
+    </div>
+  </div>
+
+  <div class="dot-bg">
+    <div class="start-bg-fade"></div>
+    <div class="start-bg"></div>
+  </div>
+
+  <!-- INFO PAGE -->
+  <section class="page-info">
+    <div class="info-content-outer">
+      <div class="info-content">
+        <h1>How It Works</h1>
+        <p>Symphonic-AI is an experiment that lets you conduct your own
+          orchestra through your browser. You can move your arms to change
+          the tempo, volume, and instrumentation of a piece of music.</p>
+        <p>It uses Tensorflow.js, a machine learning library that works
+          in the browser, to map out your movements through your webcam.
+          An algorithm plays along to the score as you conduct, using hundreds
+          of tiny audio files from live recorded instruments.</p>
+        <p>Find more information about PoseNet
+          <a href="https://medium.com/tensorflow/real-time-human-pose-estimation-in-the-browser-with-tensorflow-js-7dd0bc881cd5" target="_blank">
+          on the TensorFlow blog</a>.</p>
+        <p>
+        </p><p><button class="button-info-close">Back</button></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINISH PAGE -->
+  <section class="page-finish">
+    <div class="roses-container"></div>
+    <div class="finish-content-outer">
+      <div class="finish-content">
+        <p class="finish-text">Bravo!</p>
+        <button class="button-restart button-large">
+          Play Again
+        </button>
+      </div>
+    </div>
+  </section>  
+
+  <!-- START PAGE -->
+  <section class="page-start">
+    <div class="start-content">
+      <h1 class="raw-logo">
+        <img src="/symphonic ai logooo.c578d2a7.png" alt="" class="raw-logo-image">
+      </h1>
+      <h1 class="start-logo">
+        <img src="/logo.e9a9c890.png" alt="Symphonic-AI" class="start-logo-image">
+      </h1>
+      <h2 class="start-subtitle">Welcome to our ML based Orchestra</h2>
+      <div class="start-button-container">
+        <button class="button-large progress start-button" style="background: #14213d;" disabled="">
+          Loading...
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TUTORIAL PAGE -->
+  <section class="page-tutorial">
+    <section class="tutorial-part tutorial-part-1">
+      <div class="card tutorial-part-content">
+        <div class="tutorial-text">
+          Make the orchestra instrument play by moving your arms.
+          <br>The faster you go, the faster they go.
+        </div>
+        <div class="tutorial-image">
+          <img src="/tutorial-conducting.711d3ec4.gif">
+        </div>
+        <div class="tutorial-controls">
+          <button class="button-large tutorial-next">Next</button>
+        </div>
+      </div>
+    </section>
+    <section class="tutorial-part tutorial-part-2">
+      <div class="card tutorial-part-content">
+        <div class="tutorial-text">
+          Move up and down to play louder and softer tone.
+        </div>
+        <div class="tutorial-image">
+          <img src="/tutorial-volume.e1ba2809.gif">
+        </div>
+        <div class="tutorial-controls">
+          <button class="button-large tutorial-next">Next</button>
+        </div>
+      </div>
+    </section>
+    <section class="tutorial-part tutorial-part-3">
+      <div class="card tutorial-part-content">
+        <div class="tutorial-text">
+          Move from side-to-side to control which sections of instrument to play.
+        </div>
+        <div class="tutorial-image">
+          <img src="/tutorial-sections.491cbef3.gif">
+        </div>
+        <div class="tutorial-controls">
+          <button class="button-large tutorial-end">Let's go</button>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- MAIN PAGE -->
+  <section class="page-main">
+    <nav class="main-topbar">
+      <div class="main-topbar-buttons">
+        <button class="button-restart">
+          <img src="/icon-restart.b9809e31.svg" alt="Restart">
+        </button>
+        <button class="button-info">
+            <img src="/icon-info.96b80b69.svg" alt="Info">
+        </button>
+      </div>
+      <div class="timebar">
+        <div class="song-title song-progress progress"></div>
+      </div>
+      <!-- <h1><img class="main-topbar-logo" src="assets/logo.gif"></h1> -->
+    </nav>
+
+    <div class="orchestra-container">
+      <div class="tempo-meter-container">
+        <div class="tempo-meter-container-inner">
+            <div class="tempo-icon-container">
+              <div class="tempo-icon">
+                <img src="/metronome.0b89f498.svg">
+                <div class="tempo-icon-label">TEMPO</div>
+              </div>
+              
+            </div>
+        <div class="tempo-meter-clipping-box">
+          <div class="tempo-meter"></div>
+          <div class="tempo-meter-background"></div>
+        </div>
+        </div>
+      </div>
+
+      <div class="orchestra">
+        
+      </div>
+    </div>
+
+    <div class="video-outer">
+      <div class="video-container">
+        <div class="video-label top">LOUDER</div>
+        <div class="video-label left">HIGH STRINGS</div>
+        <div class="video-label bottom">SOFTER</div>
+        <div class="video-label right">LOW STRINGS</div>
+
+        <div class="video-border">
+          <div class="calibration-overlay">
+            <img src="/calibration-overlay.6ca5f24a.png">
+          </div>
+          <div class="conducting-overlay"></div>
+          <div class="countdown-overlay">
+            <p class="countdown-text"></p>
+          </div>
+        </div>
+      </div>
+      <div class="instructions">
+        <p>Fit your body in frame, Maestro. This is a one person experiment.</p>
+      </div>
+    </div>
+  </section>
+  <!-- Google Analytics -->
+  <script>(function (i, s, o, g, r, a, m) {
+  i['GoogleAnalyticsObject'] = r;
+  i[r] = i[r] || function () {
+    (i[r].q = i[r].q || []).push(arguments);
+  }, i[r].l = 1 * new Date();
+  a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+  a.async = 1;
+  a.src = g;
+  m.parentNode.insertBefore(a, m);
+})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+ga('create', 'UA-129142084-1', 'auto');
+ga('set', 'referrer', document.referrer.split('?')[0]);
+ga('send', 'pageview');</script>
+  <!-- End Google Analytics -->
+</body>
+</html>
